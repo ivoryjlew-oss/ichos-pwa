@@ -31,34 +31,25 @@ export default function App() {
   return (
     <>
       {pwa.isOffline && <OfflineBanner />}
-
       {showUpdate && (
         <UpdateToast
           onUpdate={() => { pwa.applyUpdate(); setShowUpdate(false) }}
           onDismiss={() => setShowUpdate(false)}
         />
       )}
-
       <IchosMain />
-
       {showInstall && !pwa.isInstalled && (
         <InstallBanner
           onInstall={async () => { await pwa.install(); setShowInstall(false) }}
           onDismiss={() => setShowInstall(false)}
         />
       )}
-
       {showPushPrompt && (
         <PushPrompt
           onEnable={async () => { await pwa.enablePush(); setShowPushPrompt(false) }}
           onDismiss={() => { setShowPushPrompt(false); setPushDismissed(true) }}
         />
       )}
-
-      <style>{`
-        @keyframes slideUp  { from { transform:translateX(-50%) translateY(40px); opacity:0 } to { transform:translateX(-50%) translateY(0); opacity:1 } }
-        @keyframes fadeDown { from { opacity:0; transform:translateX(-50%) translateY(-8px) } to { opacity:1; transform:translateX(-50%) translateY(0) } }
-      `}</style>
     </>
   )
 }
