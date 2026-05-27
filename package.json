@@ -1,0 +1,14 @@
+{
+  "name": "ichos-pwa",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ichōs — The Music Memory Platform",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivoryjlew-oss/ichos-pwa"
+  },
+  "scripts": {
+    "build": "echo 'No build needed'",
+    "dev": "npx serve ."
+  }
+}
