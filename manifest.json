@@ -1,0 +1,141 @@
+{
+  "name": "Ichōs — The Music Memory Platform",
+  "short_name": "Ichōs",
+  "description": "Find people who were stopped by the same songs you were. Echo matching, listening booths, verse pinning, and a journal for the music that shaped you.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "background_color": "#070604",
+  "theme_color": "#070604",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["music", "social", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/discover.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Discover your echoes"
+    },
+    {
+      "src": "/screenshots/booth.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Listening booths"
+    },
+    {
+      "src": "/screenshots/journal.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Listening journal"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "My Booth",
+      "short_name": "Booth",
+      "description": "Open your listening booth",
+      "url": "/booth",
+      "icons": [{ "src": "/icons/shortcut-booth.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Write in Journal",
+      "short_name": "Journal",
+      "description": "Add a journal entry",
+      "url": "/journal/new",
+      "icons": [{ "src": "/icons/shortcut-journal.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Explore Echoes",
+      "short_name": "Echoes",
+      "description": "Find your resonance matches",
+      "url": "/echoes",
+      "icons": [{ "src": "/icons/shortcut-echoes.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=app.ichos",
+      "id": "app.ichos"
+    }
+  ],
+  "prefer_related_applications": false,
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+ichos",
+      "url": "/handle?url=%s"
+    }
+  ]
+}
